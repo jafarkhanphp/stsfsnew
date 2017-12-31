@@ -1,0 +1,106 @@
+.rankers .item {
+	background:#fff;
+	border-bottom:1px solid #e5e4e4;
+	border-bottom-color:#ccc;
+	-webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	-ms-transition: all 300ms linear;
+	transition: all 300ms linear;
+	margin-bottom:10px!important;
+	margin-top:10px!important;
+	width:100%;
+	border-radius:0;
+	overflow:hidden;
+	margin: auto;
+	padding:3px;
+}
+.rankers .item-container {
+	width:100%;
+	height:auto;
+	
+	position:relative;
+}
+.rankers .item-pic-container {
+	width:100%;
+	height:auto;
+	margin-bottom:0px;
+	position:relative;
+	overflow:hidden;
+}
+.rankers .item-pic-container img {
+	width:100%;
+	height:auto;
+	border-radius:0;
+	
+}
+.rankers .item-back {
+	position:absolute;
+	bottom:0%;
+	left:0;
+	top:0%;
+	right:0;
+	background:#08a093;
+	z-index:2;
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	transition: all 200ms linear;
+	opacity:0;
+	height:100%;
+}
+.rankers .item-btn {
+	width:100%;
+	height:auto;
+	position:absolute;
+	z-index:3;
+	top: 130%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.rankers .item-btn p {
+	font-size:13px !important;
+	color:#fff!important;
+	text-align:center;
+	line-height:24px;
+}
+.rankers h2 {
+    font-size: 13px !important;
+    color: #016bbd;
+    font-weight: 400;
+    text-transform: capitalize;
+    background: none;
+   margin-bottom: 15px !important;
+border: 0;
+text-align: center;
+margin-top: 15px !important;
+}
+.rankers .rank {
+   background: #c61c00;
+	color: #fff;
+	position: absolute;
+	z-index: 1;
+	top: -3px;
+	padding: 2px 2px;
+	font-size: 12px;
+	border-radius: 0;
+	left: -3px;
+	font-weight: bold;
+	width: 58px;
+	text-align: center;
+
+}
+.rankers .item-container:hover .item-back {
+	opacity: 0.8;
+}
+.rankers .item-container:hover .item-btn {
+	top:50%;
+}

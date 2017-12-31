@@ -1,0 +1,123 @@
+.my_gallery {
+	padding-top:10px;
+	border-top:1px dashed  #ddd;
+}
+.gallery-filter {
+	list-style:none;
+	margin-bottom:5px!important;
+	float:right;
+}
+.gallery-filter li {
+	float:left;
+	line-height:30px;
+	text-transform:capitalize;
+    margin-right: 10px !important;
+
+}
+.gallery-filter li:first-child {
+	margin-right:10px!important;
+}
+.gallery-filter li:last-child {
+	margin-right:0px!important;
+}
+.gallery-filter li .bt-gallery {
+	color: #fff !important;
+	display: inline;
+	padding: 0px 10px !important;
+	border: 1px solid #FF8400;
+	margin-bottom: 5px !important;
+	background: #FF8400;
+	margin-right: 6px;
+}
+.gallery-filter li .bt-gallery:hover {
+	color: #fff !important;
+	border: 1px solid #333;
+	background:#333;
+}
+.gallery-filter li .bt-gallery-1 {
+	color: #fff !important;
+	display: inline;
+	padding: 0px 10px !important;
+	border: 1px solid #076e84;
+	margin-bottom: 5px !important;
+	background: #076e84;
+}
+.gallery-filter li .bt-gallery-1:hover {
+	color: #fff !important;
+	border: 1px solid #333;
+	background:#333;
+}
+
+.gallery-filter .form-control:focus {
+    border-color: #ddd;
+    outline: 0;
+   
+}
+.gallery-filter .form-control {
+    display: block;
+    width: 100%;
+	height: 32px;
+	padding: 0px 5px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.gallery-filter li label {
+	font-weight:500;
+	color: #fff !important;
+}
+.flt  p.here{
+	color:#fff !important;
+	margin-top: 4px !important;
+font-weight: 400;
+}
+
+/**/
+.my_gallery .form-group {
+	margin-bottom:7px;
+}
+.my_gallery .form-group label {
+	font-size: 13px !important;
+	font-weight: normal !important;
+}
+.my_gallery .btn {
+	margin-top: 22px;
+line-height: 15px;
+font-size: 13px;
+}
+.my_gallery .here {
+	margin-top:10px;
+}
+.my_gallery .main {
+	color:#333!important;
+}
+.my_gallery .sub {
+	color:#0c8400!important;
+}
+.gallery_bar {
+	background: #fafafa;
+	padding:10px;
+	border:1px solid #ddd
+}
+.portfolio-area .portfolio-item2 a {
+	border: 1px solid #ddd;
+	background: #efefef;
+	border-bottom-color: #ccc;
+	display: block;
+	padding: 4px;
+	margin-bottom:15px;
+}
+.portfolio-area .portfolio-item2 img {
+	width:100%;
+/*	min-height: 160px;*/
+}

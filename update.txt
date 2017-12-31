@@ -1,0 +1,12 @@
+1. update stu table field  update to updated
+2. Update stueducation table
+/*******************query*************************/
+ALTER TABLE `stueducation`
+ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST 
+ ADD `status` INT NOT NULL DEFAULT '0' COMMENT '0-->tempReg,1-->finalReg' AFTER `Percentage` ,
+ADD `created` DATETIME NOT NULL AFTER `status` ,
+ADD `updated` DATETIME NOT NULL AFTER `created` 
+
+3. update stueducation
+/**************************************/
+ALTER TABLE `stueducation` ADD `marksheet` VARCHAR( 100 ) NULL AFTER `Percentage` 

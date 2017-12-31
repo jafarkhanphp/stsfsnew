@@ -1,0 +1,125 @@
+#level_1 {
+	list-style: none;
+}
+#level_1 li {
+	float: left;
+	display: block;
+	z-index: 999;
+	margin: 0 0px!important;
+}
+#level_1 li a {
+	position:relative;
+	font-weight:500;
+	display: block;
+	text-decoration: none;
+	color: #333!important;
+	zoom: 1;
+	background:#fff;
+	padding: 34px 15px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+#level_1 > li > a:after {
+	content:'';
+	display: block;
+	background:#fa6400;
+	height:2px;
+	position:relative;
+	left:50%;
+	top:25px;
+	width:0;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-out;
+}
+#level_1 li a:hover:after, #level_1 li a:active:after {
+	left:0;
+	width:100%
+}
+#level_1 li a:hover, #level_1 li a.active {
+	color:#fa6400!important
+}
+/*********************************************************************************
+level 2 start
+***************/
+#level_1 #level_2 {
+	position: absolute;
+	z-index:1;
+	visibility:hidden;
+	opacity:0;
+	top:100px;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+#level_1 #level_2 li {
+	width: 200px;
+	float: none;
+	text-align: left;
+	position:relative;
+}
+#level_1 #level_2 a {
+	color:#fff!important;
+	border-bottom: 1px #059387 solid;
+	border-top:0px;
+	background:#08a093;
+	padding-top:15px;
+	padding-bottom:15px
+}
+#level_1 #level_2 li:last-child a {
+	border: none;
+}
+#level_1 #level_2 a:before {
+	content: "\f061";
+	font: normal normal normal 12px/1 FontAwesome;
+	color:#fff;
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+#level_1 #level_2 a:hover:before {
+	opacity: 1;
+	margin-right:10px;
+}
+#level_1 #level_2 li a:hover {
+}
+/**********************************************************/
+
+#level_1 li:hover #level_2 {
+	visibility:visible;
+	top:89px;
+	opacity:1;
+}
+/**********************************************************/
+
+
+
+
+ @media only screen and (min-width:320px) and (max-width:767px) {
+ #level_1 {
+ display:none;
+}
+}
+ @media only screen and (min-width:768px) and (max-width:991px) {
+ #level_1 {
+ display:none;
+}
+}
+ @media only screen and (min-width:992px) and (max-width:1169px) {
+ #level_1 li a {
+ padding: 34px 6px;
+font-weight: 300;
+}
+}

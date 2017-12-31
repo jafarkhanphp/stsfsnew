@@ -1,0 +1,50 @@
+<?php $currentUrl=Yii::app()->controller->id .'/'. Yii::app()->controller->action->id;if($currentUrl=='site/dashboard') { $dashboard='active open';} else { $dashboard='';}if($currentUrl=='user/member_dashboard') { $memberDashboard='active open';} else { $memberDashboard='';}if($currentUrl=='pincreates/pinlist') { $pinlist='active open';} else { $pinlist='';}if($currentUrl=='registrations/create' || $currentUrl=='registrations/directmemberlist') { $member='active open';} else { $member='';}?>
+<?php 
+//echo Yii::app()->user->getState('user_type');
+if(Yii::app()->user->getState('user_type')=='2'){ ?>
+<ul class="main-navigation-menu">  <li class="<?php echo $memberDashboard;?>"> <?php echo CHtml::link('<i class="clip-home-3"></i><span class="title"> Dashboard </span><span class="selected"></span>',array('/user/member_dashboard/'), array('', 'class'=>"")); ?> </li>   <li class="<?php echo $pinlist;?>"> <a href="javascript:void(0)"><i class="clip-bars"></i> <span class="title"> Pin </span><i class="icon-arrow"></i> <span class="selected"></span> </a>    <ul class="sub-menu">      <li><?php echo CHtml::link('<i class=""></i><span class="title">Pin List</span><span class="selected"></span>',array('/pincreates/pinlist'), array('', 'class'=>"")); ?> </li>    </ul>  </li>  <li class="<?php echo $member;?>"> <a href="javascript:void(0)"><i class="fa fa-group"></i> <span class="title"> Members </span><i class="icon-arrow"></i> <span class="selected"></span> </a>    <ul class="sub-menu">      <li> <?php echo CHtml::link('<span class="title">Add New Member </span><span class="selected"></span>',array('/registrations/create'), array('', 'class'=>"")); ?></li>      <li> <?php echo CHtml::link('<span class="title">Direct Member List</span><span class="selected"></span>',array('/registrations/directmemberlist'), array('', 'class'=>"")); ?></li>    </ul>  </li> 
+</ul>
+<?php } else { ?>
+<ul class="main-navigation-menu">
+  <li >
+    <?php 
+						$menuArray=Yii::app()->session['menu'];
+						for($i=0;$i<(count($menuArray));$i++){
+							if($currentUrl==$menuArray[$i]['link'] ) {   $menmenu="active open";	} else {	 $menmenu='';	}
+							
+						   
+							$Submenu=Menus::model()->franchiseSubmenu($menuArray[$i]['menu_id'] );
+							if(!empty($Submenu)){// with sub menu
+							echo '<li class="'.$menmenu .' ">';
+								echo '<a href="javascript:void(0)"><i class="fa '.$menuArray[$i]['class_style'].'"></i>
+										<span class="title">'.$menuArray[$i]['name'].'</span><i class="icon-arrow"></i>
+										<span class="selected"></span>
+									</a>';
+									echo '<ul class="sub-menu">';
+											for($j=0;$j<(count($Submenu));$j++){
+											if($currentUrl==$Submenu[$j]['link']) { 
+											$activemenu="active";	} else {	 $activemenu='';	}	
+												
+									echo '<li  class="'.$activemenu.'">';
+											echo CHtml::link('<span class="title">'.$Submenu[$j]['name'].'</span>',array(''.$Submenu[$j]['link'].''), array('onclick'=>"calendaractive(this);", 'class'=>""));
+											
+											
+										echo '</li>';
+										}
+									echo '</ul>';	
+							echo "</li>";
+								
+							} else { ///without sub menu
+								echo '<li class="'.$menmenu.'">';
+								echo CHtml::link('<i class="fa '.$menuArray[$i]['class_style'].'"></i><span class="title">'.$menuArray[$i]['name'].'</span><span class="selected"></span>',array(''.$menuArray[$i]['link'].''), array('class'=>""));
+								echo '</li>';
+							}
+							
+							
+							
+						
+						}
+						
+						?>
+</ul>
+<?php }?>

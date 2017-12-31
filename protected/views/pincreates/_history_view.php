@@ -1,0 +1,3 @@
+<tbody>  <tr class="odd gradeX">       <td><?php  if($data->pin_status==0){ echo 'Not Use'; } else if($data->pin_status==1){ echo 'Used';} 		   else if($data->pin_status==2){ echo 'Transfered';} ?></td>        <td><?php echo CHtml::encode($data->PinNo); ?></td>        <td><?php echo CHtml::encode($data->issued_rid); ?></td>        <td><?php echo $data->issued_date=='0000-00-00'?'':date('d F Y', strtotime($data->issued_date)); ?></td>        <td><?php echo CHtml::encode($data->transfer_rid); ?></td>        <td><?php echo $data->transfer_date=='0000-00-00'?'':date('d F Y', strtotime($data->transfer_date)); ?></td></tr></tbody>
+
+

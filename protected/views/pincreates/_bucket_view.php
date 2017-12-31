@@ -1,0 +1,1 @@
+ <tbody>   <tr>   <td ><?php echo Yii::app()->dateFormatter->format('dd-MMM-yyyy',$data->created); ?></td>   <td><?php echo CHtml::encode(User::model()->getUserNameByID($data->created_by)); ?></td>   <td><?php echo CHtml::encode($data->transfer_rid); ?></td>   <td ><?php echo CHtml::encode($data->PinNo); ?></td> <td>         </td>  </tr> </tbody>
