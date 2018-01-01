@@ -8,9 +8,9 @@
     <?php if($data->payment_mod==0){
 				echo 'Cash';
 			} else if($data->payment_mod==1) {
-				echo ' Check';
+				echo ' Cheque';
 			}else if($data->payment_mod==2) {
-				echo ' NFT';
+				echo ' RTGS/NEFT';
 			}
 	?>
 	
@@ -20,9 +20,9 @@
     <?php if($data->status==0){
 				echo 'Waiting';
 			} else if($data->status==1) {
-				echo 'Process';
+				echo 'Processing';
 			}else if($data->status==2) {
-				echo ' Reject';
+				echo ' Rejected';
 			}else if($data->status==3) {
 				echo ' Completed';
 			}

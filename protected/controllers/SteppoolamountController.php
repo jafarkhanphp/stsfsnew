@@ -94,7 +94,7 @@ class SteppoolamountController extends Controller
 					}
 				
 			}
-			
+		Yii::app()->user->setFlash('success', '<i class="fa fa-check-circle"></i><strong> Successfully closing Auto sharing  </strong>');	
 		$this->redirect(array('user/closing/tab/'.base64_encode(3)));
 		
 		
