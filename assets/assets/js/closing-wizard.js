@@ -22,21 +22,7 @@ var FormWizard = function() {
 		$('.step-bar').css('width', valueNow + '%');
 	};
 	
-	var displayConfirm = function() {
-		$('.display-value', form).each(function() {
-			var input = $('[name="' + $(this).attr("data-display") + '"]', form);
-			if (input.attr("type") == "text" || input.attr("type") == "email" || input.is("textarea")) {
-				$(this).html(input.val());
-			} else if (input.is("select")) {
-				$(this).html(input.find('option:selected').text());
-			} else if (input.is(":radio") || input.is(":checkbox")) {
-
-				$(this).html(input.filter(":checked").closest('label').text());
-			} else if ($(this).attr("data-display") == 'card_expiry') {
-				$(this).html($('[name="card_expiry_mm"]', form).val() + '/' + $('[name="card_expiry_yyyy"]', form).val());
-			}
-		});
-	};
+	
 	var onShowStep = function(obj, context) {
 		$(".next-step").unbind("click").click(function(e) {
 			e.preventDefault();

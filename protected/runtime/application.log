@@ -26446,3 +26446,55 @@ Stack trace:
 REQUEST_URI=/stsfsnew/index.php/user/assets/images/avatar-1.jpg
 HTTP_REFERER=http://127.0.0.1:90/stsfsnew/index.php/user/closing
 ---
+2018/01/01 08:37:39 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "favicon.ico". in C:\xampp\htdocs\stsfsnew\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(141): CWebApplication->runController('user/favicon.ic...')
+#3 C:\xampp\htdocs\stsfsnew\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stsfsnew\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/stsfsnew/index.php/user/favicon.ico
+---
+2018/01/01 08:51:36 [error] [php] Undefined variable: _Get (C:\xampp\htdocs\stsfsnew\protected\views\user\closing.php:94)
+Stack trace:
+#0 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\stsfsnew\protected\controllers\UserController.php(25): UserController->render()
+#3 C:\xampp\htdocs\stsfsnew\framework\web\actions\CInlineAction.php(49): UserController->actionClosing()
+#4 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(286): UserController->runAction()
+#6 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\stsfsnew\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\stsfsnew\index.php(11): CWebApplication->run()
+REQUEST_URI=/stsfsnew/index.php/user/closing/tab/2
+2018/01/01 09:56:48 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "si". in C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(141): CWebApplication->runController('si')
+#1 C:\xampp\htdocs\stsfsnew\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stsfsnew\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/stsfsnew/index.php/si
+---
+2018/01/01 09:57:02 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "favicon.ico". in C:\xampp\htdocs\stsfsnew\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(141): CWebApplication->runController('invoices/favico...')
+#3 C:\xampp\htdocs\stsfsnew\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stsfsnew\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/stsfsnew/index.php/invoices/favicon.ico
+---
+2018/01/01 09:58:02 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "favicon.ico". in C:\xampp\htdocs\stsfsnew\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\stsfsnew\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(141): CWebApplication->runController('steppoolamount/...')
+#3 C:\xampp\htdocs\stsfsnew\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stsfsnew\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/stsfsnew/index.php/steppoolamount/favicon.ico
+---

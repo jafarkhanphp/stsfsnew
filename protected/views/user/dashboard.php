@@ -21,30 +21,16 @@
 <meta content="" name="author" />
 
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/plugins/bootstrap/css/bootstrap.min.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/plugins/font-awesome/css/font-awesome.min.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/fonts/style.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/css/main.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/css/main-responsive.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/plugins/iCheck/skins/all.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/css/theme_dark.css" type="text/css" id="skin_color">
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/assets/css/print.css" type="text/css" media="print"/>
-
-
-
-
-
-		<![endif]-->
+		<!--<![endif]-->
 
 <!-- end: MAIN CSS -->
 
@@ -159,41 +145,15 @@
           <div class="panel panel-default">
             <div class="panel-heading" style=" text-align:center"><i class="fa clip-history"></i> Autosharing Turnover</div>
             <div class="panel-body">
-             <h4 align="center"> 00</h4>
+             <h4 align="center"> <?php echo Registrations::model()->AutosharingTurnover();?></h4>
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading" style=" text-align:center"><i class="fa clip-user-5"></i> My Level</div>
-            <div class="panel-body">
-             <h4 align="center"> 00</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading" style=" text-align:center"><i class="fa clip-users-2"></i> My Direct Sponser</div>
-            <div class="panel-body">
-             <h4 align="center"> 00</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="row">
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-heading" style=" text-align:center"><i class="fa clip-stats"></i> Business Turn Over</div>
             <div class="panel-body">
-             <h4 align="center"><span style="text-align:left;"> Left =  00</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-align:right;"> Right = 00</span></h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading" style=" text-align:center"><i class="fa fa-briefcase"></i> E- Wallet Amount</div>
-            <div class="panel-body">
-             <h4 align="center"><i class="fa fa-rupee"></i> 00</h4>
+             <h4 align="center"><i class="fa fa-rupee"></i>  <?php echo Registrations::model()->getBusinessTurnover();?></h4>
             </div>
           </div>
         </div>
@@ -201,7 +161,26 @@
           <div class="panel panel-default">
             <div class="panel-heading" style=" text-align:center"><i class="fa fa-mail-forward"></i> Withdrawl Amount</div>
             <div class="panel-body">
-             <h4 align="center"><i class="fa fa-rupee"></i> 00</h4>
+             <h4 align="center"><i class="fa fa-rupee"></i> <?php echo Wallet::model()->WithdrawlAmountadmin();?></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+        
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading" style=" text-align:center"><i class="fa fa-briefcase"></i> Total Member</div>
+            <div class="panel-body">
+             <h4 align="center"> <?php echo Registrations::model()->countMember();?></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading" style=" text-align:center"><i class="fa fa-mail-forward"></i> Total Pin Create</div>
+            <div class="panel-body">
+             <h4 align="center"> <?php echo Pincreates::model()->countTotalPin();?></h4>
             </div>
           </div>
         </div>

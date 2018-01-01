@@ -95,7 +95,7 @@ class SteppoolamountController extends Controller
 				
 			}
 			
-		
+		$this->redirect(array('user/closing/tab/'.base64_encode(3)));
 		
 		
 	}

@@ -111,6 +111,23 @@ class Registrations extends CActiveRecord
 			//array('Rid, branch_id, bv, persentage, upgrade_status, package_id, toppup_pack_id, topup_date, JoiningPackage, PV, TitleName, FirstName, MiddleName, LastName, Age, DOB, fatherName, MotherName, Occupation, Sex, MaritalStatus, PanNo, ContactNo1, ContactNo2, ContactNo3, Emailaddress, Address, City, State, District, ZipCode, Country, Nominee, NAge, Relation, SponserID, ImmediateSponserId, BinaryPosition, PinNo, RegistrationDate, Terms, BloodGroup, Username, Password, Status, Role, Level, Nationality, Upgradedate, PackageDetails, Image, created, pack_update_date, last_login, current_login, is_deleted, created_by', 'safe', 'on'=>'search'),
 		);
 	}
+	
+	public function countMember(){
+		$countmember = Yii::app()->db->createCommand("select count(Rid) from registrations")->queryScalar();
+		return $countmember;
+	}
+	public function getBusinessTurnover(){
+		    $sql="select sum(package_amt) as amount from registrations";
+			$command=Yii::app()->db->createCommand($sql);
+			$recordset=$command->queryRow();
+			return $recordset['amount'];
+	}
+	public static function AutosharingTurnover(){
+			$sql="SELECT sum(amount) as amt FROM steppoolamount";
+			$command=Yii::app()->db->createCommand($sql);
+			$queryArray=$command->queryRow();
+			return $queryArray['amt'];
+   }
 
 	/**
 	 * @return array relational rules.

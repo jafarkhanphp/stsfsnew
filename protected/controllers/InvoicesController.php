@@ -3,7 +3,7 @@
 class InvoicesController extends Controller{
 	
 	function actionAll_Invoice(){
-			$fromDate='2017-12-18';//date('Y').'-'.date('m').'-01';
+			$fromDate='2017-12-26';//date('Y').'-'.date('m').'-01';
 			//$toDate=date('Y').'-'.date('m').'-15';
 			//$lastDay=date("t", strtotime($fromDate)); 
 			
@@ -17,7 +17,7 @@ class InvoicesController extends Controller{
 					foreach($allMembers as $member){
 						$this->create_invoice($member['ImmediateSponserId'],$fromDate, '', $curentDate);
 					}
-			
+		Yii::app()->user->setFlash('success', '<i class="fa fa-check-circle"></i><strong> Successfully Generate invoice  </strong>');				$this->redirect(array('user/closing/tab/'.base64_encode(3)));
 	}
 	
 	
