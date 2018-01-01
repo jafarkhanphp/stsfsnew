@@ -3,7 +3,7 @@
 class InvoicesController extends Controller{
 	
 	function actionAll_Invoice(){
-			$fromDate='2017-12-26';//date('Y').'-'.date('m').'-01';
+			$lastinvoiceDate=Invoices::model()->getLastInvoiceDate();			$fromDate=$lastinvoiceDate;//date('Y').'-'.date('m').'-01';
 			//$toDate=date('Y').'-'.date('m').'-15';
 			//$lastDay=date("t", strtotime($fromDate)); 
 			
