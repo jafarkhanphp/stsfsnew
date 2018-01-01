@@ -26715,3 +26715,13 @@ HTTP_REFERER=http://127.0.0.1:90/stsfsnew/index.php/paymentRequest/request_list?
 2018/01/01 14:18:12 [warning] [application] Failed to set unsafe attribute "Cheque_UTR" of "PaymentRequest".
 2018/01/01 14:18:12 [warning] [application] Failed to set unsafe attribute "status" of "PaymentRequest".
 2018/01/01 14:18:12 [warning] [application] Failed to set unsafe attribute "status_update_date" of "PaymentRequest".
+2018/01/01 15:54:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "p". in C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\stsfsnew\framework\web\CWebApplication.php(141): CWebApplication->runController('p')
+#1 C:\xampp\htdocs\stsfsnew\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stsfsnew\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/stsfsnew/index.php/p
+---
+2018/01/01 16:09:21 [warning] [application] Failed to set unsafe attribute "transfer_to" of "Pinmaster".
+2018/01/01 16:10:37 [warning] [application] Failed to set unsafe attribute "transfer_to" of "Pinmaster".
